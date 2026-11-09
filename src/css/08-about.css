@@ -1,0 +1,13 @@
+/* 7. team */
+.story{ display:grid; gap:32px; grid-template-columns:minmax(0,1fr); margin-bottom:clamp(32px, 4vw, 48px); align-items:start; }
+.vm{ display:grid; gap:16px; grid-template-columns:minmax(0,1fr); }
+.vm div{ border-radius:16px; padding:20px 22px; }
+.vm .v{ background:var(--paper-3); } .vm .m{ background:var(--brand-t); }
+.vm h3{ font-size:14px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; color:var(--ink-2); }
+.founder{ display:grid; gap:36px; grid-template-columns:minmax(0,1fr); align-items:center; }
+.founder .frame{ max-width:360px; width:100%; justify-self:center; --r:-1.5deg; }
+.founder .stand{ aspect-ratio:4/5; }
+.quote{ font-family:var(--f-display); font-weight:400; font-size:clamp(26px, 3.2vw, 38px); line-height:1.18; margin:0; }
+.quote::before{ content:"\201C"; display:block; font-size:2.2em; line-height:.5; height:.42em; color:var(--orange); }
+.roles{ display:flex; flex-wrap:wrap; gap:8px; }
+

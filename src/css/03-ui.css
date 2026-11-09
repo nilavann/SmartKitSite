@@ -1,0 +1,21 @@
+/* buttons, pills, type */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px; font-weight:700; font-size:18px; text-decoration:none; border:2px solid transparent; cursor:pointer; white-space:nowrap; transition:background-color .2s var(--ease), color .2s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease); }
+.btn svg{ width:20px; height:20px; } .btn path{ fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.btn-p{ background:var(--brand); color:#fff; }
+.btn-p:hover{ background:var(--brand-d); }
+.btn-o{ border-color:var(--ink); color:var(--ink); background:transparent; }
+.btn-o:hover{ background:var(--ink); color:var(--paper); }
+.btn:active{ transform:scale(.98); }
+.btn-sm{ min-height:44px; padding:0 18px; font-size:16px; }
+.link{ font-weight:700; text-decoration:none; } .link:hover{ text-decoration:underline; }
+.pill{ display:inline-flex; align-items:center; min-height:32px; padding:0 14px; border-radius:999px; border:1px solid var(--line); background:var(--card); font-size:15px; font-weight:600; color:var(--ink); }
+.label{ font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); }
+.h2{ font-family:var(--f-display); font-weight:400; font-size:clamp(34px, 4.6vw, 54px); line-height:1.05; letter-spacing:-.005em; }
+.lead{ font-size:clamp(17px, 1.6vw, 20px); color:var(--ink-3); max-width:36em; }
+section{ position:relative; }
+.band{ padding-block:clamp(40px, 5vw, 64px); }
+.band.tight{ padding-block:clamp(32px, 4vw, 48px); }
+.band.alt{ background-color:var(--paper-2); }
+.sec-head{ display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:14px 32px; margin-bottom:clamp(20px, 2.6vw, 32px); }
+.sec-head > div{ display:flex; flex-direction:column; gap:12px; min-width:0; }
+

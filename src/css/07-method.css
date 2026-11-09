@@ -1,0 +1,19 @@
+/* 4. learning path (the drawn path is one of the three moving parts) */
+.path-wrap{ position:relative; padding-block:8px; }
+.path-svg{ position:absolute; left:0; top:0; overflow:visible; pointer-events:none; z-index:0; }
+.path-svg .ghost{ fill:none; stroke:var(--line-2); stroke-width:2; stroke-dasharray:3 8; stroke-linecap:round; }
+.path-svg .ink{ fill:none; stroke:var(--brand); stroke-width:3; stroke-linecap:round; }
+.stages{ list-style:none; padding:0; margin:0; display:grid; gap:24px; position:relative; z-index:1; }
+.stage{ display:flex; gap:16px; align-items:flex-start; }
+.stage:nth-child(even){ margin-left:30px; }
+.stage .num{ flex:none; width:56px; height:56px; border-radius:50%; border:2px solid var(--ink); background:var(--card); display:grid; place-items:center; font-family:var(--f-display); font-size:28px; transition:background-color .4s var(--ease), color .4s var(--ease); }
+.stage.lit .num{ background:var(--ink); color:var(--paper); }
+.stage h3{ font-family:var(--f-display); font-weight:400; font-size:26px; line-height:1.05; }
+.stage p{ color:var(--ink-2); font-size:16px; margin-top:4px; }
+.teach-foot{ display:grid; gap:32px; grid-template-columns:minmax(0,1fr); margin-top:clamp(28px, 4vw, 44px); align-items:start; }
+.closing{ font-family:var(--f-display); font-size:clamp(22px, 2.4vw, 28px); line-height:1.25; color:var(--ink); max-width:20em; }
+.reasons{ list-style:none; padding:0; margin:0; display:grid; gap:14px 28px; grid-template-columns:minmax(0,1fr); }
+.reasons li{ display:flex; gap:12px; align-items:flex-start; }
+.reasons svg{ flex:none; width:22px; height:22px; margin-top:2px; } .reasons path{ fill:none; stroke:var(--green-d); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+.reasons b{ display:block; font-size:17px; } .reasons small{ display:block; font-size:15px; color:var(--ink-2); line-height:1.4; }
+

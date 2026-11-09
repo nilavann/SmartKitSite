@@ -1,0 +1,13 @@
+/* 10. join + faq */
+.join{ display:grid; gap:40px; grid-template-columns:minmax(0,1fr); align-items:start; }
+.steps{ list-style:none; padding:0; margin:18px 0 0; display:grid; gap:14px; }
+.steps li{ padding-left:18px; border-left:2px solid var(--line); }
+.steps b{ display:block; font-size:18px; } .steps small{ display:block; color:var(--ink-2); font-size:15px; }
+.faq{ display:grid; gap:10px; }
+.faq details{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-md); }
+.faq summary{ list-style:none; cursor:pointer; padding:16px 18px; font-weight:700; font-size:17px; display:flex; justify-content:space-between; gap:16px; align-items:center; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; flex:none; width:28px; height:28px; border-radius:50%; background:var(--brand-t); color:var(--brand); display:grid; place-items:center; font-size:19px; font-weight:600; }
+.faq details[open] summary::after{ content:"\2212"; }
+.faq .ans{ padding:0 18px 16px; color:var(--ink-2); }
+

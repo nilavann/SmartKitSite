@@ -1,0 +1,27 @@
+/* ===== founder: die-cut sticker on a notebook collage (graph paper, torn paper, doodles) ===== */
+.cutout{ position:relative; width:100%; max-width:420px; aspect-ratio:1/1.06; margin:0; justify-self:center; }
+.cutout::before{ content:""; position:absolute; left:0; top:7%; width:78%; height:78%; background-image:linear-gradient(var(--line-2) 1px, transparent 1px), linear-gradient(90deg, var(--line-2) 1px, transparent 1px); background-size:20px 20px; opacity:.7; clip-path:inset(0); transition:clip-path 1s .1s var(--ease); }
+.cutout::after{ content:""; position:absolute; right:0; top:0; width:46%; height:88%; background:#EADFCB; clip-path:polygon(4% 0, 100% 2%, 98% 100%, 0 98%, 3% 84%, 0 70%, 4% 55%, 1% 40%, 5% 24%, 1% 10%); transition:clip-path 1s .25s var(--ease); }
+.cutout.rv:not(.in)::before{ clip-path:inset(0 100% 0 0); }
+.cutout.rv:not(.in)::after{ clip-path:inset(0 0 100% 0); }
+.co-blob{ position:absolute; z-index:1; left:10%; bottom:8%; width:80%; aspect-ratio:1; border-radius:50%; background:var(--acc-t); transition:scale .9s .2s var(--spring), opacity .5s .2s; }
+.cutout.rv:not(.in) .co-blob{ scale:.3; opacity:0; }
+.co-img{ position:absolute; z-index:2; left:13%; bottom:8%; width:74%; height:auto; transform-origin:50% 100%; filter:drop-shadow(0 14px 16px rgba(36,21,47,.22)); transition:rotate .45s var(--spring), scale .45s var(--spring); }
+.cutout.rv:not(.in) .co-img{ opacity:0; }
+.cutout.in .co-img{ animation:sticker-in 1s .25s var(--spring) backwards, bob 6.5s 1.4s ease-in-out infinite; }
+@keyframes sticker-in{ from{ opacity:0; transform:translateY(60px) scale(.7) rotate(-10deg); } }
+@media (hover:hover){ .cutout:hover .co-img{ rotate:-3deg; scale:1.05; } }
+.co-doodle{ position:absolute; z-index:3; overflow:visible; pointer-events:none; }
+.co-doodle path{ fill:none; stroke:var(--ink); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+.co-star{ left:0; top:0; width:17%; } .co-arrow{ left:20%; top:-3%; width:13%; } .co-arrow path{ stroke:var(--brand); }
+.co-scribble{ right:-4%; bottom:30%; width:19%; } .co-scribble path{ stroke:var(--orange); stroke-width:7; opacity:.9; }
+.dr{ stroke-dasharray:1; stroke-dashoffset:0; transition:stroke-dashoffset 1.1s .7s var(--ease); }
+.cutout.rv:not(.in) .dr{ stroke-dashoffset:1; }
+.cutout figcaption{ display:contents; }
+.co-name{ position:absolute; z-index:4; left:-1%; bottom:4%; rotate:-5deg; font-family:var(--f-hand); font-weight:700; font-size:clamp(22px, 2.6vw, 28px); color:var(--ink); white-space:nowrap; transition:scale .6s .9s var(--spring), opacity .4s .9s; }
+.co-tag{ position:absolute; z-index:4; right:0; bottom:9%; rotate:6deg; display:inline-flex; align-items:center; gap:8px; min-height:42px; padding:0 16px; border-radius:999px; background:#fff; border:2px solid var(--ink); box-shadow:3px 4px 0 var(--ink); font-weight:700; font-size:clamp(14px, 1.6vw, 17px); white-space:nowrap; color:var(--ink); transition:scale .6s 1s var(--spring), opacity .4s 1s; animation:bob 5.4s -2s ease-in-out infinite; }
+.co-tag svg{ width:17px; height:17px; } .co-tag path{ fill:var(--yellow); stroke:var(--ink); stroke-width:1.5; stroke-linejoin:round; }
+.cutout.rv:not(.in) .co-name, .cutout.rv:not(.in) .co-tag{ opacity:0; scale:.5; }
+.co-blob, .co-doodle, .co-img{ translate:calc(var(--px, 0) * var(--d, 10) * 1px) calc(var(--py, 0) * var(--d, 10) * 1px); }
+.co-img{ --d:12; } .co-blob{ --d:-8; } .co-doodle{ --d:18; }
+

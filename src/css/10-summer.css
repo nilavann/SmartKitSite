@@ -1,0 +1,16 @@
+/* 9. summer */
+.summer{ background-color:var(--paper-3); }
+.camp{ display:grid; gap:36px; grid-template-columns:minmax(0,1fr); align-items:center; }
+.pile{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+.pile button{ border:0; background:none; padding:0; cursor:zoom-in; text-align:left; }
+.pile .stand{ aspect-ratio:1; }
+.pile .first{ grid-column:span 2; } .pile .first .stand{ aspect-ratio:16/10; }
+.facts{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+.facts div{ background:#fff; border:1px solid #F1DFB0; border-radius:var(--r-sm); padding:12px 14px; }
+.facts b{ display:block; font-size:16px; } .facts small{ display:block; font-size:13px; color:var(--ink-2); }
+.lightbox{ position:fixed; inset:0; z-index:85; background:rgba(36,21,47,.82); display:grid; place-items:center; padding:24px; }
+.lightbox .box{ width:min(720px, 100%); }
+.lightbox .stand{ aspect-ratio:4/3; }
+.lightbox .nav-btns{ display:flex; justify-content:center; gap:12px; margin-top:16px; }
+.lightbox button{ min-height:46px; padding:0 18px; border-radius:999px; border:2px solid #fff; background:transparent; color:#fff; font-weight:700; cursor:pointer; }
+

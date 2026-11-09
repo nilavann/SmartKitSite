@@ -1,0 +1,58 @@
+
+/* Layout concept: real work, plainly shown. Warm paper, serif headings, photo frames for the centre's own photos and
+   children's work, one handprint colour per programme. Motion is limited to the logo, the learning path and the
+   handwriting slider. Deliberately single-theme (light paper). */
+:root{
+  --paper:#F8F5EE; --paper-2:#F0EADF; --card:#FFFFFF; --line:#E2DACB;
+  --ink:#24152F; --ink-2:#5A4F63; --plum:#2B1A3A;
+  --brand:#6B2FA0; --brand-d:#55237F; --brand-t:#EFE6F7;
+  --orange:#F28A2E; --yellow:#FFC629; --green:#22A04B; --green-d:#17733A; --navy:#2C3E8C;
+  --gap-bg:#FFF1D6; --gap-ink:#7A4300; --gap-line:#F0C877;
+  --f-display:'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --f-body:'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-hand:'Caveat', 'Comic Sans MS', cursive;
+  --paper-3:#FFF4D6; --line-2:#D4C9B6; --ink-3:#3A2F44; --note:#FFFDF8;
+  --r-sm:12px; --r-md:16px; --r-lg:24px;
+  --shadow:0 10px 30px rgba(36,21,47,.08); --shadow-lift:0 18px 40px rgba(36,21,47,.14); --shadow-sticker:0 14px 30px rgba(36,21,47,.16), 0 2px 4px rgba(36,21,47,.08);
+  --ease:cubic-bezier(.25,1,.5,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  --acc:#6B2FA0; --acc-d:#4A1F72; --acc-t:#EFE6F7; --acc-t2:#F7F2FB;
+  color-scheme: light;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+[hidden]{ display:none !important; }
+html{ scroll-behavior:smooth; scroll-padding-top:92px; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:17px; line-height:1.55; overflow-x:hidden; }
+body::before{ content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top, 0px); z-index:60; background:var(--paper); }
+h1,h2,h3{ text-wrap:balance; margin:0; }
+p{ margin:0; }
+a{ color:var(--brand); }
+img{ max-width:100%; }
+button{ font:inherit; }
+:focus-visible{ outline:3px solid var(--brand); outline-offset:3px; border-radius:6px; }
+.skip-link{ position:absolute; left:16px; top:-100px; z-index:100; padding:10px 16px; border-radius:8px; background:var(--ink); color:#fff; font-weight:700; }
+.skip-link:focus{ top:8px; }
+.wrap{ max-width:1200px; margin-inline:auto; padding-left:max(clamp(16px, 4vw, 40px), env(safe-area-inset-left, 0px)); padding-right:max(clamp(16px, 4vw, 40px), env(safe-area-inset-right, 0px)); }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+main, .foot{ overflow-x:clip; }
+
+/* one handprint colour per programme */
+.c-purple{ --acc:#6B2FA0; --acc-d:#4A1F72; --acc-t:#EFE6F7; --acc-t2:#F7F2FB; }
+.c-orange{ --acc:#F28A2E; --acc-d:#C8641A; --acc-t:#FDE9D6; --acc-t2:#FEF4EA; }
+.c-yellow{ --acc:#FFC629; --acc-d:#E5A50F; --acc-t:#FFF1C7; --acc-t2:#FFF8E3; }
+.c-green{ --acc:#22A04B; --acc-d:#17733A; --acc-t:#DDF2E3; --acc-t2:#EEF8F1; }
+.c-red{ --acc:#E5453C; --acc-d:#B8302A; --acc-t:#FCE2E0; --acc-t2:#FEF1F0; }
+.c-navy{ --acc:#2C3E8C; --acc-d:#1F2B5E; --acc-t:#E2E6F5; --acc-t2:#F1F3FA; }
+.acc{ fill:var(--acc); } .accd{ fill:var(--acc-d); } .tint{ fill:var(--acc-t); } .tint2{ fill:var(--acc-t2); }
+
+/* content-gap tags */
+.gap{ display:none; align-items:center; gap:6px; font-size:12px; font-weight:700; line-height:1.2; color:var(--gap-ink); background:var(--gap-bg); border:1px solid var(--gap-line); border-radius:6px; padding:3px 8px; width:max-content; max-width:100%; }
+
+/* photo frames and placeholders for the centre's own photos */
+.frame{ position:relative; background:#fff; padding:8px; border-radius:6px; box-shadow:0 10px 24px rgba(36,21,47,.12); rotate:var(--r, 0deg); }
+.frame figcaption, .frame .cap{ display:block; font-size:14px; font-weight:600; color:var(--ink-2); padding:10px 4px 4px; text-align:left; }
+.frame img{ display:block; width:100%; height:100%; object-fit:cover; border-radius:3px; }
+.stand{ position:relative; display:grid; place-items:center; align-content:center; gap:8px; background:var(--acc-t); color:var(--acc-d); border-radius:3px; overflow:hidden; text-align:center; padding:12px; }
+.stand svg{ width:34%; max-width:96px; height:auto; }
+.stand svg path, .stand svg circle, .stand svg rect{ fill:none; stroke:var(--acc-d); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.stand em{ font-style:normal; font-weight:600; font-size:13px; color:var(--acc-d); }
+

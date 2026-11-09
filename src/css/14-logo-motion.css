@@ -1,0 +1,7 @@
+/* logo motion: hands stamp in once; raise on hover, focus or tap */
+.logo-anim .h{ animation:stamp .55s var(--ease) both; }
+.logo-anim .h.o{ animation-delay:.1s; } .logo-anim .h.y{ animation-delay:.22s; } .logo-anim .h.g{ animation-delay:.34s; } .logo-anim .h.p{ animation-delay:.46s; }
+.logo-anim .w{ animation:fadein .5s var(--ease) .6s both; }
+.logo-anim.speak .h{ animation:speak .8s var(--ease) both; }
+.logo-anim.speak .h.o{ transform-origin:28% 47%; animation-delay:0s; } .logo-anim.speak .h.y{ transform-origin:39% 47%; animation-delay:.08s; } .logo-anim.speak .h.g{ transform-origin:57% 42%; animation-delay:.16s; } .logo-anim.speak .h.p{ transform-origin:70% 50%; animation-delay:.24s; }
+

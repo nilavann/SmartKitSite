@@ -1,0 +1,22 @@
+/* 8. schools offer */
+.offer{ position:relative; background:var(--plum); color:var(--paper); border-radius:24px; padding:clamp(24px, 3.4vw, 44px); display:grid; gap:24px; grid-template-columns:minmax(0,1fr); align-items:center; }
+.offer h2{ font-family:var(--f-display); font-weight:400; font-size:clamp(30px, 3.4vw, 44px); line-height:1.05; color:#fff; }
+.offer p{ color:#E2D3F2; margin-top:10px; max-width:36em; }
+.offer ul{ list-style:none; padding:0; margin:18px 0 0; display:grid; gap:8px 20px; grid-template-columns:minmax(0,1fr); }
+.offer li{ display:flex; gap:10px; align-items:flex-start; font-weight:600; color:#fff; }
+.offer li::before{ content:""; flex:none; width:8px; height:8px; border-radius:50%; background:#fff; margin-top:9px; }
+.offer .btn-p{ background:#fff; color:var(--ink); }
+.offer .btn-p:hover{ background:var(--brand-t); }
+.offer .btn-p{ white-space:normal; text-align:center; }
+
+
+/* schools: sideways scroll of school reviews */
+.school-reviews{ margin-top:clamp(28px, 4vw, 44px); display:grid; gap:16px; }
+.school-reviews h3{ font-family:var(--f-display); font-weight:400; font-size:clamp(26px, 3vw, 34px); line-height:1.05; }
+.sr-track{ display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 4px 16px; margin:0 -4px; scrollbar-width:thin; scrollbar-color:var(--brand) var(--line); }
+.sr-card{ flex:0 0 84%; scroll-snap-align:start; margin:0; display:grid; gap:14px; align-content:start; background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow); }
+.sr-icon{ width:52px; height:52px; border-radius:50%; background:var(--brand-t); display:grid; place-items:center; }
+.sr-icon svg{ width:28px; height:28px; } .sr-icon path{ fill:none; stroke:var(--brand); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.sr-card blockquote{ margin:0; font-size:17px; line-height:1.5; color:var(--ink); }
+.sr-card figcaption{ display:grid; gap:2px; font-size:14px; color:var(--ink-2); } .sr-card figcaption b{ color:var(--ink); font-size:16px; }
+@media (min-width:700px){ .sr-card{ flex-basis:360px; } }

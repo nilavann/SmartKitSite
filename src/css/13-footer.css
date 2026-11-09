@@ -1,0 +1,17 @@
+/* footer */
+.foot{ background:var(--plum); color:#E2D3F2; padding-block:44px calc(110px + env(safe-area-inset-bottom, 0px)); }
+.foot .wrap{ display:grid; gap:32px; grid-template-columns:minmax(0,1fr); }
+.foot .plate{ background:var(--paper); border-radius:var(--r-sm); padding:10px 14px; width:max-content; }
+.foot .plate img{ height:68px; width:auto; display:block; }
+.foot h3{ color:#fff; font-size:14px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
+.foot a{ color:#F3ECFA; text-decoration:none; } .foot a:hover{ text-decoration:underline; }
+.foot ul{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.foot .copy{ border-top:1px solid rgba(226,211,242,.2); padding-top:18px; font-size:14px; }
+
+/* phone action bar */
+.actbar{ position:fixed; left:0; right:0; bottom:0; z-index:55; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; padding:10px max(12px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); background:rgba(248,245,238,.96); border-top:1px solid var(--line); }
+.actbar a{ min-height:50px; border-radius:var(--r-sm); display:inline-flex; align-items:center; justify-content:center; gap:7px; font-weight:700; font-size:15px; text-decoration:none; color:var(--ink); border:1.5px solid var(--ink); }
+.actbar a.wa{ border-color:var(--green-d); color:var(--green-d); }
+.actbar a.en{ background:var(--brand); border-color:var(--brand); color:#fff; }
+.actbar svg{ width:18px; height:18px; } .actbar path{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+

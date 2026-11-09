@@ -1,0 +1,6 @@
+/* 2. trust line */
+.trust{ background:var(--plum); color:#F3ECFA; padding:16px 0 16px; margin: 18px 0 0 0; }
+.trust .wrap{ display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; justify-content:space-between; }
+.trust p{ font-size:clamp(17px, 1.8vw, 21px); max-width:52em; }
+.trust b{ color:#fff; } .trust .rating b{ color:var(--ink); }
+
